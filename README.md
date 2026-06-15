@@ -42,3 +42,19 @@ Git Repository
 ├── workflows/
 ├── docs/
 └── tests/
+
+### Production banking
+OpenShift:
+- 3 master
+- >= 3 worker dedicated hoặc infra worker
+- Worker: 16-32 vCPU, 64-128 GB RAM tùy job volume
+- StorageClass block + RWX/object storage
+
+AAP:
+- Platform Gateway HA
+- Controller HA
+- Hub HA
+- EDA HA nếu dùng event-driven
+- External PostgreSQL HA
+- Automation Mesh execution nodes theo zone
+- Backup + DR runbook
